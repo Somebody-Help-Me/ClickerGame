@@ -1,6 +1,8 @@
 package com.yh.clicker
 
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -20,14 +22,15 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        var btn =findViewById<Button>(R.id.asd)
+        var res:String=""
         dimentionSet(5)
         for(row in asset){
             for(col in row){
-                println(col)
+                res+=col.toString()
             }
         }
-
+        btn.setOnClickListener(View.OnClickListener { btn.text=res })
 //        val timer = Timer()
 //        val task = object : TimerTask() {
 //            override fun run() {
