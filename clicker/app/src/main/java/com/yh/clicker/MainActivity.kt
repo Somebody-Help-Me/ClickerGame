@@ -3,6 +3,7 @@ package com.yh.clicker
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -13,24 +14,28 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.yh.clicker.ui.theme.ClickerTheme
+import java.math.BigInteger
 import java.util.Timer
 import java.util.TimerTask
 
 class MainActivity : ComponentActivity() {
+    var credit: BigInteger = BigInteger.ZERO
+    lateinit var tickBtn: Button
+    lateinit var arr: Array<Array<BigInteger>>
+    lateinit var arr0: Array<Array<TextView>>
+    lateinit var arr1: Array<Array<TextView>>
+    lateinit var arr2: Array<Array<TextView>>
+    lateinit var arr3: Array<Array<TextView>>
 
-    lateinit var asset:Array<IntArray>
+    var dimention = 5
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var btn =findViewById<Button>(R.id.asd)
-        var res:String=""
-        dimentionSet(5)
-        for(row in asset){
-            for(col in row){
-                res+=col.toString()
-            }
-        }
-        btn.setOnClickListener(View.OnClickListener { btn.text=res })
+        tickBtn = findViewById(R.id.tickBtn)
+        tickBtn.setOnClickListener { tick() }
+        dimentionSet(dimention)
+
+
 //        val timer = Timer()
 //        val task = object : TimerTask() {
 //            override fun run() {
@@ -42,15 +47,18 @@ class MainActivity : ComponentActivity() {
 //        timer.schedule(task, 0, 5000)
 
 
-
     }
 
-    private fun dimentionSet(n:Int=1){
-        asset=Array(n){IntArray(n)}
-        asset[0][1]=1
+    private fun dimentionSet(n: Int = 1) {
+        arr = Array(n) { Array<BigInteger>(n) { BigInteger.ZERO } }
+        arr[0][0] = BigInteger("1")
     }
 
-    fun tick(){
+    fun tick() {
+        for (i in 0 until dimention) {
+            credit.add(arr[i][0])
+            for (j in 1 until dimention) arr[i][j - 1].add(arr[i][j])
+        }
 
     }
 }

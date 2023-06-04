@@ -1,3 +1,35 @@
 <resources>
-    <string name="app_name">clicker</string>
+    <string name="app_name">clicker</string>\
+    <string name="client">유저 정보</string>
+    <string name="purchase">구매하기</string>
+    <string name="amount">개</string>
+    <string name="tick">/tick</string>
+    <string name="credits">credits</string>
+    <string name="credits_per_tick">credits/tick</string>
+    <string name="amount_per_tick">개/tick</string>
+    <string name="price">구매 가격</string>
+    <string name="statistics">통계</string>
+    <string name="settings">환경 설정</string>
+    <string name="zero">0</string>
+    <string name="one">1티어</string>
+    <string name="two">2티어</string>
+    <string name="three">3티어</string>
+    <string name="four">4티어</string>
+    <string name="five">5티어</string>
+    <string name="one_produce">credit 생산량</string>
+    <string name="two_produce">1티어 생산량</string>
+    <string name="three_produce">2티어 생산량</string>
+    <string name="four_produce">3티어 생산량</string>
+    <string name="five_produce">4티어 생산량</string>
+    <string name="one_has">1티어 보유량</string>
+    <string name="two_has">2티어 보유량</string>
+    <string name="three_has">3티어 보유량</string>
+    <string name="four_has">4티어 보유량</string>
+    <string name="five_has">5티어 보유량</string>
+    <string name="first">1차원</string>
+    <string name="second">2차원</string>
+    <string name="third">3차원</string>
+    <string name="fourth">4차원</string>
+    <string name="fifth">5차원</string>
+    <string name="plus">+</string>
 </resources>
