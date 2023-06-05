@@ -2,18 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"><!--차원 영역-->
+    android:orientation="vertical"
+    android:id="@+id/buyLayout"><!--차원 영역-->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"><!--1차원-->
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/first" />
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zero"
+                android:id="@+id/dimention"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/dimention" />
+        </LinearLayout>
 
 
         <LinearLayout
@@ -124,6 +132,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:id="@+id/pt1"
                 android:text="@string/purchase" />
 
         </LinearLayout><!--1티어-->
@@ -198,6 +207,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/show1_2"
                         android:text="@string/zero" />
 
                     <TextView
@@ -221,6 +231,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/show1_3"
                     android:text="@string/zero" />
 
                 <TextView
@@ -234,6 +245,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:id="@+id/pt2"
                 android:text="@string/purchase" />
         </LinearLayout><!--2티어-->
         <LinearLayout
@@ -345,6 +357,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:id="@+id/pt3"
                 android:text="@string/purchase" />
         </LinearLayout><!--3티어-->
         <LinearLayout
@@ -455,6 +468,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:id="@+id/pt4"
                 android:text="@string/purchase" />
         </LinearLayout><!--4티어-->
         <LinearLayout
@@ -565,8 +579,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:id="@+id/pt5"
                 android:text="@string/purchase" />
         </LinearLayout><!--5티어-->
-    </LinearLayout><!--1차원-->
 
 </LinearLayout><!--차원 영역-->

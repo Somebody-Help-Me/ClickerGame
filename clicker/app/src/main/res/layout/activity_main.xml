@@ -14,6 +14,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/credit"
             android:text="@string/zero" />
 
         <TextView
@@ -57,11 +58,8 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:id="@+id/tickBtn"
-        android:text="클릭하면 틱 발생" /><!--틱 버튼-->
+        android:text="@string/tickbtn" /><!--틱 버튼-->
     <include layout="@layout/submain"/>
-
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,6 +70,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/first"
+            android:id="@+id/first"
             style="?android:attr/buttonBarButtonStyle" />
 
         <Button
@@ -79,6 +78,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/second"
+            android:id="@+id/second"
             style="?android:attr/buttonBarButtonStyle" />
 
         <Button
@@ -86,6 +86,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/third"
+            android:id="@+id/third"
             style="?android:attr/buttonBarButtonStyle" />
 
         <Button
@@ -93,6 +94,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/fourth"
+            android:id="@+id/fourth"
             style="?android:attr/buttonBarButtonStyle" />
 
         <Button
@@ -100,6 +102,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/fifth"
+            android:id="@+id/fifth"
             style="?android:attr/buttonBarButtonStyle" />
         
         
@@ -114,6 +117,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/statistics"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/upgrade"
             style="?android:attr/buttonBarButtonStyle" />
 
         <Button

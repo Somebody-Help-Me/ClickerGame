@@ -32,4 +32,7 @@
     <string name="fourth">4차원</string>
     <string name="fifth">5차원</string>
     <string name="plus">+</string>
+    <string name="tickbtn">tick</string>
+    <string name="upgrade">업그레이드</string>
+    <string name="dimention">차원\n</string>
 </resources>
